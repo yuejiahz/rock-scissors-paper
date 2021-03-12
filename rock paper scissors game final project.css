@@ -74,16 +74,19 @@ h2,h3{
     font-size: 300%;
 }
 
-#rock-player,#rock-computer{
+#rock,#rock-computer{
     background-image: url("img/rock.png");
+    background-size:100%;
 }
 
-#scissors-player,#scissors-computer{
-    background-image: url("img/scissors.png");   
+#scissors,#scissors-computer{
+    background-image: url("img/scissors.png");  
+    background-size:100%; 
 }
 
-#paper-player,#paper-computer{
+#paper,#paper-computer{
     background-image: url("img/paper.png");
+    background-size:100%;
 }
 
 .player-buttons{

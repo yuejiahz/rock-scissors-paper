@@ -4,9 +4,9 @@ let computerSelection, playerSelection, status;
 let matchNum = 0;
 
 //select buttons 
-const rock = document.querySelector('#rock-player');
-const paper = document.querySelector('#paper-player');
-const scissors = document.querySelector('#scissors-player');
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
 const playerButton = document.getElementById(`${playerSelection}`);
 const startButton = document.querySelector('#start-game');
 
