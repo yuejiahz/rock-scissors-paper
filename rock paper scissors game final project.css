@@ -126,20 +126,20 @@ h2,h3{
 
 .winner{
     background-color: yellow;
-    transition: all 0.3s;
+    transition: all 0.1s;
     border-color:red;
     border-width: 8px;
 }
 
 .loser{
     background-color: black;
-    transition: all 0.3s;
+    transition: all 0.1s;
     border-color: red;
     border-width: 8px;
 }
 
 .fair{
-    transition: all 0.3s;
+    transition: all 0.1s;
     border-color: red;
     border-width: 8px;
 }

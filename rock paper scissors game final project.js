@@ -4,16 +4,14 @@ let computerSelection, playerSelection, status;
 let matchNum = 0;
 
 //select buttons 
+const playerButton = document.querySelectorAll('.player-buttons');
+playerButton.forEach(playerButton => playerButton.addEventListener('click', game));
+const startButton = document.querySelector('#start-game');
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
-const playerButton = document.getElementById(`${playerSelection}`);
-const startButton = document.querySelector('#start-game');
 
-// add Event Listener for buttons
-rock.addEventListener('click', game);
-paper.addEventListener('click', game);
-scissors.addEventListener('click', game);
+// add click Event Listener for buttons
 startButton.addEventListener('click', refreshPage);
 
 //select computer's button and add event listener to remove animations
@@ -42,8 +40,11 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     matchCount();
-    const playerButton = document.getElementById(`${playerSelection}`);
-    const computerButton = document.getElementById(`${computerSelection}` + "-computer");
+  
+    const computerButton=document.getElementById(`${computerSelection}`+"-computer");
+
+    if(!computerButton) return;
+    computerButton.currentTime=0;
 
     if (computerSelection === playerSelection) {
         document.getElementById('announce').innerHTML = "Fair game, please try again!";
@@ -106,9 +107,9 @@ function game(playerSelection) {
 
 
 function announceWinner() {
-    rock.removeEventListener('click', game);
-    paper.removeEventListener('click', game);
-    scissors.removeEventListener('click', game);
+   rock.removeEventListener('click', game);
+   paper.removeEventListener('click', game);
+   scissors.removeEventListener('click', game);
 
     if (computerScore == 5) {
         document.getElementById('announce').innerHTML = "YOU LOSE THE GAME!!! ";
@@ -117,12 +118,10 @@ function announceWinner() {
         document.getElementById('announce').innerHTML = "CONGRATULATIONS YOU WIN!!!";
     }
     document.getElementById('announce').classList.add('final-winner');
-
+        
 }
-
+    
 function refreshPage(){
     window.location.reload(true);
 }
-
-
 
