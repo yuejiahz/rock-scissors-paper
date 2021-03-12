@@ -6,6 +6,6 @@ I added some css changes at computer's button every match for more fun. Each com
 
 The code is basic but I have learnt a ton from this first project I made. It has a lot improvement to be made and I have a lot to learn how to write a better and cleaner code, but it's time to move on to get more exposure on different exciting projects. 
 
-It was a fun journey and I finally made it! 
+It was a fun journey! 
 
 
