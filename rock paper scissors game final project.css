@@ -1,0 +1,172 @@
+h1{
+    color:white;
+    font-family:monospace;
+    font-size:250%;
+    text-align:center;
+    padding:15px;
+    background-color: rgb(182, 4, 4);
+    width: 100%;
+    margin-top: 0;
+}
+
+*{
+    margin:0 auto;    
+}
+
+body{
+    background-color: rgb(228, 209, 175);
+   
+}
+
+#info{
+    padding: 5px 5px 0 5px;
+    display: flex;
+    flex-wrap: nowrap;  
+}
+
+#announce{
+    width:480px;
+    line-height:30px;
+    height:30px;
+    text-align: center;
+    border-radius: 30px;
+    font-size:140%;
+    flex-wrap: wrap;
+    padding: 15px;
+    color:black;
+    font-family: sans-serif;
+    padding:5px;
+    margin: 20px;
+    flex-grow: 1;
+}
+
+#player-section, #computer-section{
+    padding: 5px;
+    width:400px;
+    border-radius: 10px;
+    border: solid black;
+    height:300px;
+}
+    
+#both-player{
+    margin-top: 10px;
+    border:none;
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    width:900px;
+}
+
+p{
+    font-family:sans-serif;
+    text-align:center;
+    margin: 1.3rem;
+    font-weight: bold;
+    color:brown
+}
+
+h2,h3{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#player-scoreboard, #computer-scoreboard{
+    font-size: 300%;
+}
+
+#rock-player,#rock-computer{
+    background-image: url("img/rock.png");
+}
+
+#scissors-player,#scissors-computer{
+    background-image: url("img/scissors.png");   
+}
+
+#paper-player,#paper-computer{
+    background-image: url("img/paper.png");
+}
+
+.player-buttons{
+    background-color: rgba(217, 232, 248, 0.678);
+    border-radius: 10px;
+    border-color: black;
+    margin: 10px;
+    height: 130px;
+    width: 100px;
+    font-weight: bold;
+    color:rgb(22, 57, 170);
+    text-shadow:2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    font-size: 20px;
+}
+ 
+.player-buttons:hover{
+    border-color: yellow;
+    border-width: 5px;
+    transform: rotate(20);
+    transition-duration: 0.2s;
+    transform: scale(1.2);
+    box-shadow:0 0 2px 1px;
+}
+
+.computer-buttons{
+    background-color: rgba(243, 222, 231, 0.575);
+    border-radius: 10px;
+    border-color: black;
+    margin: 10px;
+    height: 130px;
+    width: 100px;
+    font-weight: bold;
+    color:rgb(243, 20, 76);
+    text-shadow:2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    font-size: 20px;
+}
+
+.winner{
+    background-color: yellow;
+    transition: all 0.3s;
+    border-color:red;
+    border-width: 8px;
+}
+
+.loser{
+    background-color: black;
+    transition: all 0.3s;
+    border-color: red;
+    border-width: 8px;
+}
+
+.fair{
+    transition: all 0.3s;
+    border-color: red;
+    border-width: 8px;
+}
+
+.final-winner{
+    animation-name:finalWinnerAnimation;
+    animation-duration:3s; 
+    animation-iteration-count:infinite;
+    transform: scale(1.1);
+    text-shadow:2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+ @keyframes finalWinnerAnimation{
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    50%  {color: green;}
+    100% {color: red;}
+}
+ 
+#lower-banner{
+    margin: 40px;
+    display: flex;  
+}
+ 
+#start-game{
+    padding: 20px;
+    border-radius: 20px;
+    width: 200px;
+    font-size:150%;
+    color:white;
+    background-color: rgb(182, 29, 29);
+}
