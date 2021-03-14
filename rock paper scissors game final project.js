@@ -130,5 +130,6 @@ function announceWinner() {
     
 function refreshPage(){
     window.location.reload(true);
+    return false;
 }
 
