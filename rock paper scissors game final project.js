@@ -42,12 +42,14 @@ function playRound(playerSelection, computerSelection) {
     matchCount();
   
     const computerButton=document.getElementById(`${computerSelection}`+"-computer");
+    var announce= document.getElementById('announce');
 
     if(!computerButton) return;
     computerButton.currentTime=0;
 
     if (computerSelection === playerSelection) {
-        document.getElementById('announce').innerHTML = "Fair game, please try again!";
+        announce.innerHTML = "Fair game, please try again!";
+
         computerButton.classList.add('fair');
         status = "fair game";
 
@@ -58,12 +60,12 @@ function playRound(playerSelection, computerSelection) {
         (computerSelection === "paper" && playerSelection === "rock")) {
         computerScoreCount();
         computerButton.classList.add('winner');
-        document.getElementById('announce').innerHTML = "Computer score 1 point!";
+       announce.innerHTML = "Computer score 1 point!";
     }
     else if (playerSelection) {
         playerScoreCount();
         computerButton.classList.add('loser');
-        document.getElementById('announce').innerHTML = "Not bad, player score 1 point! ";
+        announce.innerHTML = "Not bad, player score 1 point! ";
     }
 }
 
@@ -107,17 +109,22 @@ function game(playerSelection) {
 
 
 function announceWinner() {
+
+    var announce= document.getElementById('announce');
+
    rock.removeEventListener('click', game);
    paper.removeEventListener('click', game);
    scissors.removeEventListener('click', game);
 
+
     if (computerScore == 5) {
         document.getElementById('announce').innerHTML = "YOU LOSE THE GAME!!! ";
+       // document.getElementById('announce').insertAdjacentHTML( 'beforeend', str );
     }
     else if (playerScore == 5) {
-        document.getElementById('announce').innerHTML = "CONGRATULATIONS YOU WIN!!!";
+        announce.innerHTML = "CONGRATULATIONS YOU WIN!!!";
     }
-    document.getElementById('announce').classList.add('final-winner');
+     announce.classList.add('final-winner');
         
 }
     
